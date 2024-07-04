@@ -1,17 +1,18 @@
 import React, { ReactNode } from "react";
-import { ThemeProvider } from "./theme-provider";
+
 import ButtonTheme from "./button-theme";
-import { TailwindIndicator } from "./TailwindIndicator";
-import { MenuProvider } from "@/lib/useMobileMenu";
-import { Analytics } from "@vercel/analytics/react";
+import { MenuProvider } from "./Nav/useMobileMenu";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
+import { TailwindIndicator } from "./ui/TailwindIndicator";
+import { ThemeProvider } from "./theme-provider";
 
 type Props = { children: ReactNode };
 
 export default function Provider({ children }: Props) {
   return (
     <>
-      <ThemeProvider>
+       <ThemeProvider>
         <MenuProvider>
           {children}
           <ButtonTheme />

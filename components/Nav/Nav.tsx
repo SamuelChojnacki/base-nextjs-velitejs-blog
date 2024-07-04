@@ -1,11 +1,10 @@
-import Logo from "@/components/ui/logo";
 import Typography from "@/components/ui/typography";
-import { config } from "@/config";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import LinksDesk from "./LinksDesk";
 import MenuButton from "./NavMobile/MenuButton/MenuButton";
 import NavMobile from "./NavMobile/NavMobile";
+import { config } from "@/config/config";
 
 type NavProps = {};
 
@@ -22,7 +21,7 @@ const Nav = ({}: NavProps): JSX.Element => {
         <div className="absolute bottom-0 z-30 flex size-full items-center justify-between gap-8 px-4 shadow-xl 2xl:px-16 ">
           {/* Logo & title */}
           <Link href="/" className={cn("flex items-end gap-2")}>
-            <Logo size={100} />
+            <h1 className="text-3xl font-bold">LOGO</h1>
             <Typography
               variant="large"
               className="text-2xl text-secondary dark:text-foreground"
@@ -60,4 +59,3 @@ const Nav = ({}: NavProps): JSX.Element => {
 };
 
 export { Nav };
-

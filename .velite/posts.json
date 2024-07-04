@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Hello world",
+    "slug": "hello-world",
+    "date": "1992-02-25T12:22:00.000Z",
+    "cover": {
+      "src": "/static/cover-0656db21.png",
+      "height": 1600,
+      "width": 2560,
+      "blurDataURL": "data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAABwAQCdASoIAAUAD8DOJZgCdAFAAAD+58X0eA1ZE99cAA==",
+      "blurWidth": 8,
+      "blurHeight": 5
+    },
+    "metadata": {
+      "readingTime": 1,
+      "wordCount": 12
+    },
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse</p>",
+    "permalink": "/blog/hello-world"
+  }
+]

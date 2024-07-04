@@ -1,7 +1,6 @@
 "use client"; // Ajout de la directive "use client"
 
-import { config } from "@/config";
-import { useMenu } from "@/lib/useMobileMenu";
+import { config } from "@/config/config";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import {
@@ -13,6 +12,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useMenu } from "../useMobileMenu";
 
 type Props = {};
 
@@ -99,16 +99,16 @@ const NavMobile = (props: Props) => {
             exit="initial"
             className="relative flex size-full flex-col items-center gap-4 pt-14"
           >
-            {config.navigationLinks.map((link, index) => (
+            {config.MenuLinks.map((link, index) => (
               <MobileNavLink
                 key={index}
                 aria-label={link.label}
                 title={link.label}
-                href={link.href}
+                href={link.url}
               />
             ))}
             <div className="absolute bottom-4 flex gap-10">
-             {config.social.map((social, index) => (
+              {config.social.map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}
@@ -122,8 +122,7 @@ const NavMobile = (props: Props) => {
                     />
                   </motion.div>
                 </Link>
-              
-             ))}
+              ))}
             </div>
           </motion.div>
         </motion.div>
@@ -131,7 +130,6 @@ const NavMobile = (props: Props) => {
     </AnimatePresence>
   );
 };
-
 
 type MobileNavLinkProps = {
   title: string;
@@ -168,8 +166,7 @@ const MobileNavLink = ({ title, href }: MobileNavLinkProps) => {
   return (
     <motion.div
       variants={mobileLinkVars}
-      className={cn(
-        "text-2xl uppercase text-foreground"      )}
+      className={cn("text-2xl uppercase text-foreground")}
     >
       <motion.a
         aria-label="menu"

@@ -1,13 +1,14 @@
 "use client";
 import { FC, HTMLAttributes } from "react";
 import "./menuButton.scss";
-import { useMenu } from "@/lib/useMobileMenu";
 import { cn } from "@/lib/utils";
+import { useMenu } from "../../useMobileMenu";
 
 type MenuButtonProps = HTMLAttributes<SVGElement>;
 
 const MenuButton: FC<MenuButtonProps> = ({ className }) => {
   const { isOpen, toggleMenu } = useMenu();
+
 
   return (
     <svg

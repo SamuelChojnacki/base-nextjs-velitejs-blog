@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
-import "./globals.css";
+import "@/assets/styles/globals.scss";
+import Provider from "@/components/provider";
+import { cn } from "@/lib/utils";
+import { Nav } from "@/components/Nav/Nav";
 
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"] });
 
@@ -15,8 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={bricolage.className}>{children}</body>
+    <html lang="fr" suppressHydrationWarning>
+      <body
+        className={cn(
+          bricolage.className,
+          "w-screen overflow-x-hidden  min-h-screen"
+        )}
+      >
+        <Provider>
+          <Nav />
+          {children}
+        </Provider>
+      </body>
     </html>
   );
 }
