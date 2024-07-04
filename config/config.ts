@@ -29,15 +29,15 @@ export const config = {
     },
     {
       label: "Eddy.S",
-      url: "/services",
+      url: "/",
     },
     {
       label: "Portfolio",
-      url: "/portfolio",
+      url: "/",
     },
     {
       label: "Contact",
-      url: "/contact",
+      url: "/",
     },
   ],
   social : [
